@@ -989,10 +989,10 @@ for(let i=0;i<18;i++){
 // Then replace the src below with your actual URL
 // Try multiple Imgur URL formats
 const photoUrls = [
-  'https://i.imgur.com/SjiUrQl.jpeg',
-  'https://i.imgur.com/SjiUrQl.jpg',
-  'https://imgur.com/SjiUrQl.jpg',
-  'https://i.imgur.com/SjiUrQll.jpg'
+  'https://jallilmutalib.github.io/JALLIL-PORTFOLIO/photo.jpg',
+  'https://jallilmutalib.github.io/JALLIL-PORTFOLIO/photo.jpg.jpg',
+  'https://raw.githubusercontent.com/jallilmutalib/JALLIL-PORTFOLIO/main/photo.jpg',
+  'https://raw.githubusercontent.com/jallilmutalib/JALLIL-PORTFOLIO/main/photo.jpg.jpg'
 ]
 const profileImg = document.getElementById('profileImg')
 let urlIndex = 0
@@ -1005,7 +1005,6 @@ profileImg.onerror = function(){
   tryNextUrl()
 }
 profileImg.onload = function(){
-  // Also sync to chat avatar
   const chatAvatarImg = document.querySelector('.chat-avatar img')
   if(chatAvatarImg) chatAvatarImg.src = this.src
 }
