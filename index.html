@@ -20,7 +20,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 
 /* ANIMATIONS */
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-@keyframes spin-ring{to{filter:hue-rotate(360deg)}}
+@keyframes spin-ring{to{filter:none;transform:rotate(360deg)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
@@ -73,9 +73,9 @@ nav.scrolled{background:rgba(6,11,20,.98);box-shadow:0 4px 30px rgba(0,0,0,.5)}
 .btn-outline:hover{border-color:rgba(59,130,246,.5);background:rgba(59,130,246,.07);transform:translateY(-2px)}
 .hero-visual{display:flex;justify-content:center;align-items:center;animation:slideInRight 1s ease .5s both}
 .photo-wrapper{position:relative;width:300px;height:300px}
-.photo-ring{width:300px;height:300px;border-radius:24px;background:linear-gradient(135deg,#3b82f6,#6366f1,#06b6d4,#3b82f6);padding:3px;animation:spin-ring 6s linear infinite;border-radius:28px}
-.photo-inner{width:100%;height:100%;border-radius:26px;overflow:hidden;background:var(--bg2)}
-.photo-inner img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:none}
+.photo-ring{width:300px;height:300px;border-radius:28px;background:linear-gradient(135deg,#3b82f6,#6366f1,#06b6d4,#3b82f6);padding:3px;animation:spin-ring 6s linear infinite}
+.photo-inner{width:100%;height:100%;border-radius:26px;overflow:hidden;background:#000;isolation:isolate}
+.photo-inner img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:none;mix-blend-mode:normal;opacity:1}
 .photo-badge{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:.5rem 1.25rem;font-size:.75rem;font-weight:700;color:var(--accent);white-space:nowrap;letter-spacing:.06em;text-transform:uppercase;backdrop-filter:blur(8px)}
 .float-tag{position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.5rem .85rem;font-size:.72rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:.4rem;backdrop-filter:blur(8px);animation:float 4s ease-in-out infinite;box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .float-tag.t1{top:-10px;right:-20px;animation-delay:0s}
@@ -322,9 +322,9 @@ footer p{color:var(--text3);font-size:.8rem;margin-top:.4rem}
       <div class="photo-wrapper">
         <div class="float-tag t1"><div class="dot2"></div> Available Now</div>
         <div class="float-tag t2">🤖 AI Automation</div>
-        <div class="photo-ring">
-          <div class="photo-inner">
-            <img src="https://i.imgur.com/placeholder.jpg" alt="Jallil Mutalib" id="profileImg" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(1.05) contrast(1.05)" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;background:var(--bg2)\'><div style=\'font-size:5rem;font-weight:900;background:linear-gradient(135deg,#3b82f6,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text\'>JM</div><div style=\'font-size:.7rem;color:#64748b;letter-spacing:.1em;text-transform:uppercase\'>Virtual Assistant</div></div>'"/>
+        <div class="photo-ring" style="animation:none!important;transform:none!important;transition:none!important">
+          <div class="photo-inner" style="animation:none!important;transform:none!important">
+            <img src="https://i.imgur.com/placeholder.jpg" alt="Jallil Mutalib" id="profileImg" style="width:100%;height:100%;object-fit:cover;object-position:center top;filter:none!important;animation:none!important;transform:none!important" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;background:var(--bg2)\'><div style=\'font-size:5rem;font-weight:900;background:linear-gradient(135deg,#3b82f6,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text\'>JM</div><div style=\'font-size:.7rem;color:#64748b;letter-spacing:.1em;text-transform:uppercase\'>Virtual Assistant</div></div>'"/>
           </div>
         </div>
         <div class="photo-badge">✦ Virtual Assistant & AI Expert</div>
