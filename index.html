@@ -988,27 +988,13 @@ for(let i=0;i<18;i++){
 // To use your photo, host it on GitHub Pages, Imgur, or any image host
 // Then replace the src below with your actual URL
 // Try multiple Imgur URL formats
-const photoUrls = [
-  'https://jallilmutalib.github.io/JALLIL-PORTFOLIO/photo.jpg',
-  'https://jallilmutalib.github.io/JALLIL-PORTFOLIO/photo.jpg.jpg',
-  'https://raw.githubusercontent.com/jallilmutalib/JALLIL-PORTFOLIO/main/photo.jpg',
-  'https://raw.githubusercontent.com/jallilmutalib/JALLIL-PORTFOLIO/main/photo.jpg.jpg'
-]
+const PHOTO = 'https://jallilmutalib.github.io/JALLIL-PORTFOLIO/photo.jpg'
 const profileImg = document.getElementById('profileImg')
-let urlIndex = 0
-function tryNextUrl(){
-  if(urlIndex < photoUrls.length){
-    profileImg.src = photoUrls[urlIndex++]
-  }
-}
-profileImg.onerror = function(){
-  tryNextUrl()
-}
+profileImg.src = PHOTO
 profileImg.onload = function(){
   const chatAvatarImg = document.querySelector('.chat-avatar img')
-  if(chatAvatarImg) chatAvatarImg.src = this.src
+  if(chatAvatarImg) chatAvatarImg.src = PHOTO
 }
-tryNextUrl()
 
 /* ── CHAT ── */
 const SYSTEM=`You are an AI assistant for Jallil Mutalib's professional portfolio website. Answer questions about Jallil in a warm, professional, and confident tone to help potential clients understand his value and consider hiring him.
