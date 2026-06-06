@@ -652,27 +652,38 @@ footer p{color:var(--text3);font-size:.79rem;margin-top:.4rem}
   <div class="projects-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px; margin-top:48px;">
 
     <!-- CARD 1: Social Media Workflow -->
- <a href="https://jallilmutalib.github.io/Workflow_Built/" target="_blank">
-  View live project →
+<a href="https://jallilmutalib.github.io/Workflow_Built/"
+   target="_blank"
+   style="text-decoration:none; display:flex; flex-direction:column; background:#1f2330; border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:28px; transition:transform 0.2s, border-color 0.2s;"
+   onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(99,178,255,0.4)'"
+   onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.08)'">
+
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+    <span style="font-size:26px;">📱</span>
+    <span style="background:rgba(99,178,255,0.1); border:1px solid rgba(99,178,255,0.3); border-radius:20px; padding:3px 12px; font-size:11px; font-weight:600; color:#63b2ff; letter-spacing:0.5px;">N8N · LIVE</span>
+  </div>
+
+  <h3 style="font-size:17px; font-weight:700; color:#eef0f5; margin-bottom:10px; line-height:1.4;">
+    Social Media Scheduling Automation
+  </h3>
+
+  <p style="font-size:13.5px; color:#8891a8; line-height:1.65; margin-bottom:20px; flex-grow:1;">
+    Automatically reads a content queue from Google Sheets, generates AI captions via OpenAI, and publishes to Facebook & Instagram. Logs every result back to the sheet.
+  </p>
+
+  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
+    <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">n8n</span>
+    <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">Google Sheets</span>
+    <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">OpenAI</span>
+    <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">Facebook API</span>
+    <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">Instagram API</span>
+  </div>
+
+  <div style="color:#63b2ff; font-size:13px; font-weight:600;">
+    View live project →
+  </div>
+
 </a>
-       style="text-decoration:none; display:flex; flex-direction:column; background:#1f2330; border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:28px; transition:transform 0.2s, border-color 0.2s;"
-       onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(99,178,255,0.4)'"
-       onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(255,255,255,0.08)'">
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
-        <span style="font-size:26px;">📱</span>
-        <span style="background:rgba(99,178,255,0.1); border:1px solid rgba(99,178,255,0.3); border-radius:20px; padding:3px 12px; font-size:11px; font-weight:600; color:#63b2ff; letter-spacing:0.5px;">N8N · LIVE</span>
-      </div>
-      <h3 style="font-size:17px; font-weight:700; color:#eef0f5; margin-bottom:10px; line-height:1.4;">Social Media Scheduling Automation</h3>
-      <p style="font-size:13.5px; color:#8891a8; line-height:1.65; margin-bottom:20px; flex-grow:1;">Automatically reads a content queue from Google Sheets, generates AI captions via OpenAI, and publishes to Facebook & Instagram. Logs every result back to the sheet.</p>
-      <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
-        <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">n8n</span>
-        <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">Google Sheets</span>
-        <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">OpenAI</span>
-        <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">Facebook API</span>
-        <span style="background:#14171f; border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:4px 10px; font-size:12px; color:#8891a8;">Instagram API</span>
-      </div>
-      <div style="color:#63b2ff; font-size:13px; font-weight:600;">View live project →</div>
-    </a>
 
     
     <!-- CARD 4: Portfolio Website -->
